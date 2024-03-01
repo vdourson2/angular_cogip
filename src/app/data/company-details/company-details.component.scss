@@ -1,0 +1,56 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    font-size: 20px;;
+}
+
+h1{
+    align-self: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 30px;
+}
+
+h2{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 20px;
+
+}
+
+.table {
+    border: black solid 1px;
+    border-collapse: collapse;
+
+    thead{
+        font-weight: bold;
+    }
+    
+    .table-row {
+        border: black solid 1px;
+        
+    }
+    .table-body {
+        border: black solid 1px;
+        
+       
+    }
+    tr, th, td{
+        border: black solid 1px;
+        padding: 5px 10px;
+    }
+    .notFound{
+        text-align: center;
+    }
+}

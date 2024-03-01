@@ -1,8 +1,12 @@
 import { Routes } from '@angular/router';
-import { CompanyDisplayComponent } from './data/company-display/company-display.component';
+import { CompanyListComponent } from './data/company-list/company-list.component';
 
 export const routes: Routes = [
     {
-        path:'', component: CompanyDisplayComponent
+        path:'', component: CompanyListComponent
+    },
+    {
+        path:'',
+        loadChildren: () => import('./data/data.routes').then(module => module.dataRoutes)
     }
 ];
