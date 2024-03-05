@@ -1,9 +1,11 @@
 import { Routes } from '@angular/router';
-import { CompanyListComponent } from './data/company-list/company-list.component';
 
 export const routes: Routes = [
     {
-        path:'', component: CompanyListComponent
+        path:'',
+        redirectTo: 'companies', 
+        pathMatch: 'full' 
+    
     },
     {
         path:'',

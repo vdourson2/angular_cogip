@@ -11,10 +11,14 @@
         </tr>
     </thead>
     <tbody class="table-body">
+        <!-- 
+            (click)="goToCompanyDetails(company.id)"
+            <td><a [routerLink]="['company', company.id]"> {{ company.name }}</a></td> 
+        -->
         @for (company of listCompanies; track company){
             <tr>
                 <td>{{ company.id }}</td>
-                <td><a [routerLink]="['company', company.id]"> {{ company.name }}</a></td>
+                <td><a [routerLink]="['/company', company.id]"> {{ company.name }}</a></td>
                 <td>{{ company.country }}</td>
                 <td>{{ company.tva }}</td>
                 <td>{{ company.type }}</td>
@@ -26,5 +30,8 @@
         }
     </tbody>
 </table>
+
+<a style="position: fixed; right: 50px; font-weight:bolder ; color:white; font-size : 32px; text-decoration: none; background-color: blue;" routerLink="/company/add"> + </a>
+
 
 

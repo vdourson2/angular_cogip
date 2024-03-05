@@ -1,0 +1,13 @@
+<form (ngSubmit)="handleSubmit()">
+    <label for="name">Name : </label>
+    <input name="name" type="text" [(ngModel)]="company.name">
+
+    <label for="country">Country : </label>
+    <input name="country" type="text" [(ngModel)]="company.country">
+    
+    <label for="tva">TVA : </label>
+    <input name="tva" type="number" [(ngModel)]="company.tva">
+    
+    <label for="type">Type : </label>
+    <input name="type" type="text" [(ngModel)]="company.type">
+</form>

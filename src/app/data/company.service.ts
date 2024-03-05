@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, of, tap } from 'rxjs';
 import { Company } from './company';
@@ -20,7 +20,7 @@ export class CompanyService {
     );
   }
 
-  getCompanyById(companyId: number): Observable<Company|undefined>{
+  getCompanyById(companyId: number): Observable<Company | undefined>{
     return this.http.get<Company>(`/api/company/${companyId}`).pipe(
       tap((company)=> console.table(company)),
       catchError((error) => {
@@ -31,5 +31,22 @@ export class CompanyService {
     )
   }
 
+  addCompany(company: Company): Observable<Company | undefined>{
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'content-type': 'application/json'
+      })
+    };
+    return this.http.post<Company>('/api/company', company, httpOptions).pipe(
+      tap((company)=> console.table(company)),
+      catchError((error) => {
+        console.log(`Error while adding company`);
+        console.log(error);
+        return of(undefined);
+      })
+    );  
+
+      
+  }
  
 }

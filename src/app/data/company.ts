@@ -10,13 +10,13 @@ export class Company {
     invoices : number[];
     contacts : Contact[]; 
 
-constructor(){
-    this.name = 'Entrer un nom...';
-    this.country = 'Belgique';
-    this.tva = 0;
-    this.type = 'client';
-    this.timestamp = new Date();
-    this.invoices = [];
-    this.contacts = [];
-}
+    constructor(){
+        this.name = 'Entrer un nom...';
+        this.country = 'Belgique';
+        this.tva = 0;
+        this.type = 'client';
+        this.timestamp = new Date();
+        this.invoices = [];
+        this.contacts = [];
+    }
 }
