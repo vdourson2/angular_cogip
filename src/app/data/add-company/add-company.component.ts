@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CompanyFormComponent } from '../company-form/company-form.component';
 import { Company } from '../company';
 
@@ -9,7 +9,12 @@ import { Company } from '../company';
   templateUrl: './add-company.component.html',
   styleUrl: './add-company.component.scss'
 })
-export class AddCompanyComponent {
+export class AddCompanyComponent implements OnInit {
   
+  company!: Company;
+
+  ngOnInit(): void {
+    this.company = new Company();
+  }
 
 }

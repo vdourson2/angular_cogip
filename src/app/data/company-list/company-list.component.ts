@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { inject } from '@angular/core';
 import { CompanyService } from '../company.service';
 import { Company } from '../company';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { CompanyDetailsComponent } from '../company-details/company-details.component';
 
 @Component({

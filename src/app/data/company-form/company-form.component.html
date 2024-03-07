@@ -9,5 +9,11 @@
     <input name="tva" type="number" [(ngModel)]="company.tva">
     
     <label for="type">Type : </label>
-    <input name="type" type="text" [(ngModel)]="company.type">
+    <select name="type" id="type" [(ngModel)]="company.type">
+        <option value="client">client</option>
+        <option value="provider">provider</option>
+    </select>
+    <!-- <input name="type" type="text" [(ngModel)]="company.type"> -->
+
+    <button type="submit">Submit</button>
 </form>
