@@ -44,9 +44,21 @@ export class CompanyService {
         console.log(error);
         return of(undefined);
       })
-    );  
-
-      
+    );     
   }
+
+  deleteCompany(idCompany: number|undefined): Observable<null | undefined>{
+    return this.http.delete<null>(`/api/company/${idCompany}`).pipe(
+      tap((response)=> console.table(response)),
+      catchError((error) => {
+        console.log(`Error while deleting company with id ${idCompany}`);
+        console.log(error);
+        return of(undefined);
+      })
+    )
+  }
+
+  
+
  
 }

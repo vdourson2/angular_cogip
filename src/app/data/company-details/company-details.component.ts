@@ -1,11 +1,13 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { Company } from '../company';
 import { CompanyService } from '../company.service';
+import { RouterLink } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-company-details',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, DatePipe],
   templateUrl: './company-details.component.html',
   styleUrl: './company-details.component.scss'
 })

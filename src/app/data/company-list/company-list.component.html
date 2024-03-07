@@ -8,13 +8,10 @@
             <th>Country</th>
             <th>TVA</th>
             <th>Type</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody class="table-body">
-        <!-- 
-            (click)="goToCompanyDetails(company.id)"
-            <td><a [routerLink]="['company', company.id]"> {{ company.name }}</a></td> 
-        -->
         @for (company of listCompanies; track company){
             <tr>
                 <td>{{ company.id }}</td>
@@ -22,6 +19,10 @@
                 <td>{{ company.country }}</td>
                 <td>{{ company.tva }}</td>
                 <td>{{ company.type }}</td>
+                <td>
+                    <button><a [routerLink]="['/company', company.id]">Details</a></button>
+                    <button><a (click)="deleteOnClick(company.id)">Delete</a></button>
+                </td>
             </tr>
         }@empty {
             <tr>

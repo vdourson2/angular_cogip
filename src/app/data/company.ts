@@ -1,12 +1,12 @@
 import { Contact } from './contact'; 
 
 export class Company {
-    id : number | undefined;
+    id! : number;
     name : string;
     country : string;
     tva : number;
     type : 'provider' | 'client';
-    timestamp : Date | undefined;
+    timestamp! : Date;
     invoices : number[] | undefined;
     contacts : Contact[] | undefined; 
 

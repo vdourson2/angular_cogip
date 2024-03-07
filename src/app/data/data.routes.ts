@@ -8,6 +8,10 @@ export const dataRoutes: Routes = [{
             loadComponent:() => import('./add-company/add-company.component').then(module => module.AddCompanyComponent),        
         },
         {
+            path:'company/update/:id',
+            loadComponent:() => import('./update-company/update-company.component').then(module => module.UpdateCompanyComponent),        
+        },
+        {
             path:'company/:id', 
             loadComponent: () => import('./company-details/company-details.component').then(module => module.CompanyDetailsComponent),
         },

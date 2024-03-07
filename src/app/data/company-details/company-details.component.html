@@ -51,7 +51,7 @@
                     <td>{{ contact.lastName }}</td>
                     <td>{{ contact.phone }}</td>
                     <td>{{ contact.email }}</td>
-                    <td>{{ contact.timestamp}}</td>
+                    <td>{{ contact.timestamp | date:"dd/MM/yyy"}}</td>
                 </tr>
             }@empty {
                 <tr >
@@ -61,3 +61,15 @@
         </tbody>
     </table>
 }  
+
+<div class="actions">
+    <button>
+        <a [routerLink]="['/companies']">Return</a>
+    </button>
+    @if (company){
+        <button>
+            <a [routerLink]="['/company/update', company.id]">Update</a>
+        </button>
+    }
+</div>
+

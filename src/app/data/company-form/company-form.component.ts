@@ -23,7 +23,7 @@ export class CompanyFormComponent {
       this.company = company;
       console.log("Company added");
       console.table(company);
-      this.router.navigate(['/company',company.id])
+      this.router.navigate(['/company',this.company.id])
     })
   }
 }
